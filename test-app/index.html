@@ -1075,19 +1075,42 @@
             }
         });
 
-        // Gallery navigation (basic implementation)
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const arrows = document.querySelectorAll('.arrow');
-        
-        arrows[0].addEventListener('click', () => {
-            // Previous image logic
-            console.log('Previous image');
-        });
-        
-        arrows[1].addEventListener('click', () => {
-            // Next image logic
-            console.log('Next image');
-        });
+        // Gallery carousel functionality
+        let currentIndex = 0;
+        const carousel = document.getElementById('galleryCarousel');
+        const totalItems = document.querySelectorAll('.gallery-item').length;
+        const itemWidth = 300; // 280px + 20px gap
+
+        function updateCarousel() {
+            const translateX = -currentIndex * itemWidth;
+            carousel.style.transform = `translateX(${translateX}px)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % (totalItems - 3); // Show 4 at a time
+            if (currentIndex >= totalItems - 3) {
+                currentIndex = 0; // Loop to beginning
+            }
+            updateCarousel();
+        }
+
+        function previousImage() {
+            currentIndex = currentIndex <= 0 ? totalItems - 4 : currentIndex - 1;
+            updateCarousel();
+        }
+
+        // Auto-scroll gallery every 3 seconds
+        setInterval(nextImage, 3000);
+
+        // Navigation menu responsive fixes
+        @media (max-width: 1200px) {
+            .nav-menu {
+                gap: 15px;
+            }
+            .nav-menu a {
+                font-size: 14px;
+            }
+        }
     </script>
 </body>
 </html>
