@@ -897,30 +897,44 @@
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
-            <div class="gallery-grid fade-in">
-                <div class="gallery-item">
-                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/2661bfb0b171a232ebb8eba1ebf444d9443694a1?width=590" alt="Gallery 1" />
+            <div class="gallery-carousel-container fade-in">
+                <div class="gallery-carousel" id="galleryCarousel">
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/2661bfb0b171a232ebb8eba1ebf444d9443694a1?width=590" alt="Gallery 1" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/8472089664afa4e1ee79159e2f03b5d45fe7a906?width=590" alt="Gallery 2" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/a4f2de1f70a4c74884e2ff2317093f8cc4d24bf7?width=590" alt="Gallery 3" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/74386d6f09fc71c6b680503d67ec855662ca36d3?width=590" alt="Gallery 4" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/2661bfb0b171a232ebb8eba1ebf444d9443694a1?width=590" alt="Gallery 5" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/8472089664afa4e1ee79159e2f03b5d45fe7a906?width=590" alt="Gallery 6" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/a4f2de1f70a4c74884e2ff2317093f8cc4d24bf7?width=590" alt="Gallery 7" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/74386d6f09fc71c6b680503d67ec855662ca36d3?width=590" alt="Gallery 8" />
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/8472089664afa4e1ee79159e2f03b5d45fe7a906?width=590" alt="Gallery 2" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/a4f2de1f70a4c74884e2ff2317093f8cc4d24bf7?width=590" alt="Gallery 3" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/74386d6f09fc71c6b680503d67ec855662ca36d3?width=590" alt="Gallery 4" />
-                </div>
-            </div>
-            <div class="gallery-arrows">
-                <div class="arrow">
-                    <svg width="30" height="50" viewBox="0 0 30 50" fill="none">
-                        <path d="M28 2L2.78727 23.4775C1.84985 24.276 1.84984 25.7239 2.78727 26.5225L28 48" stroke="black" stroke-width="4"/>
-                    </svg>
-                </div>
-                <div class="arrow">
-                    <svg width="30" height="50" viewBox="0 0 30 50" fill="none">
-                        <path d="M2 2L27.2127 23.4775C28.1502 24.276 28.1502 25.7239 27.2127 26.5225L2 48" stroke="black" stroke-width="4"/>
-                    </svg>
+                <div class="gallery-arrows">
+                    <div class="arrow" onclick="previousImage()">
+                        <svg width="30" height="50" viewBox="0 0 30 50" fill="none">
+                            <path d="M28 2L2.78727 23.4775C1.84985 24.276 1.84984 25.7239 2.78727 26.5225L28 48" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div class="arrow" onclick="nextImage()">
+                        <svg width="30" height="50" viewBox="0 0 30 50" fill="none">
+                            <path d="M2 2L27.2127 23.4775C28.1502 24.276 28.1502 25.7239 27.2127 26.5225L2 48" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
