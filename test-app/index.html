@@ -455,25 +455,37 @@
             text-align: center;
         }
 
+        .contact-cta-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
         .contact-cta {
             font-family: 'Charm', serif;
             font-size: 36px;
             color: white;
-            margin-bottom: 40px;
         }
 
-        .contact-arrows {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-
-        .contact-arrow-line {
+        .contact-cta-arrow {
             width: 2px;
             height: 70px;
             background: white;
+            position: relative;
+        }
+
+        .contact-cta-arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: -6px;
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 10px solid white;
         }
 
         .contact-form-container {
