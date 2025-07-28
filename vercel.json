@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "cp -r test-app/* .",
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
